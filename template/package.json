@@ -1,0 +1,55 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "private": <%= private %>,
+  "keywords": [
+  ],
+  "scripts": {
+    "dev": "cooking watch -p",
+    "dist": "cooking build -p",
+    "deploy": "cooking build --no-color"<% if (unit) { %>,
+    "test": "cooking test karma start --single-run"<% } %>
+  },<% if (github) { %>
+  "repository": {
+    "type": "git",
+    "url": "git+<%= github %>.git"
+  },
+  "homepage": "<%= github %>#readme",
+  "bugs": {
+    "url": "<%= github %>/issues"
+  },<% } %><% if (author) { %>
+  "author": "<%= author %>",<% } %>
+  "license": "<%= license %>",
+  "dependencies": {
+    "vue": <% if (!vueVersion) { %>"^1.0.0"<% } else {%>"^2.0.0-rc"<% } %>,
+    "babel-polyfill": "*"
+  },
+  "devDependencies": {
+    "cooking-vue<%= vueVersion %>": "*"<% if (js) { %>,
+    "cooking-<%= js %>": "*"<% } %><% if (cooking) { %>,
+    "cooking": "^1.0.0",
+    "cooking-vue<%= vueVersion %>": "*",
+    "cooking-lint": "*",<% if (csstype) { %>
+    "cooking-<%= csstype %>": "*",<% } %>
+    "cooking-autoprefixer": "*",
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-0": "^6.0.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "css-loader": "^0.24.0",
+    "extract-text-webpack-plugin": <% if (cooking == 1) { %>"^1.0.0"<% } else {%>"^2.0.0-beta"<% } %>,
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.9.0",
+    "json-loader": "^0.5.4",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": <% if (cooking == 1) { %>"^1.12.0"<% } else {%>"^2.1.0-beta"<% } %>,
+    "webpack-dev-server": <% if (cooking == 1) { %>"^1.14.0"<% } else {%>"^2.1.0-beta"<% } %>,
+    "postcss": "^5.1.0",
+    "postcss-loader": "^0.11.1"<% } %>
+  }
+}

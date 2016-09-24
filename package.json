@@ -1,0 +1,24 @@
+{
+  "name": "slush-cooking-pages-vue",
+  "version": "0.0.0",
+  "description": "A multiple pages project for vue",
+  "keywords": [
+    "slush-cooking-pages-vue",
+    "cooking",
+    "slushgenerator"
+  ],
+  "scripts": {
+    "dev": "cooking watch",
+    "dist": "cooking build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cookingjs/slush-cooking-pages-vue.git"
+  },
+  "homepage": "https://github.com/cookingjs/slush-cooking-pages-vue#readme",
+  "bugs": {
+    "url": "https://github.com/cookingjs/slush-cooking-pages-vue/issues"
+  },
+  "author": "qingwei-li<cinwell.li@gmail.com>",
+  "license": "MIT"
+}
