@@ -29,7 +29,7 @@ gulp.task('default', function (done) {
     {
       type: 'list',
       name: 'vueVersion',
-      message: 'What Vue version do you what?',
+      message: 'Which Vue version do you want?',
       default: 2,
       choices: [
         {name: 'Vue 2', value: 2},
@@ -39,7 +39,7 @@ gulp.task('default', function (done) {
     {
       type: 'list',
       name: 'js',
-      message: 'What ES2015+ compiler do you what to use?',
+      message: 'Which ES2015+ compiler do you want to use?',
       default: '',
       choices: [
         {name: 'bable (preset-es2015, preset-stage-0, perset-stage-2, plugin-transform-runtime)', value: ''},
@@ -49,7 +49,7 @@ gulp.task('default', function (done) {
     {
       type: 'list',
       name: 'cooking',
-      message: 'What way use cooking do you want?',
+      message: 'How do you want to use cooking?',
       default: '',
       choices: [
         {name: 'Global cooking (webpack 2)', value: ''},
@@ -66,7 +66,7 @@ gulp.task('default', function (done) {
     {
       type: 'list',
       name: 'csstype',
-      message: 'What CSS preprocessor do you want to use?',
+      message: 'Which CSS preprocessor do you want to use?',
       default: '',
       choices: [
         {name: 'Only CSS', value: ''},
