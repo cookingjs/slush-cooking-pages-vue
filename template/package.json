@@ -22,7 +22,7 @@
   "author": "<%= author %>",<% } %>
   "license": "<%= license %>",
   "dependencies": {
-    "vue": <% if (!vueVersion) { %>"^1.0.0"<% } else {%>"^2.0.0-rc"<% } %>,
+    "vue": <% if (!vueVersion) { %>"^1.0.0"<% } else {%>"^2.0.2"<% } %>,
     "babel-polyfill": "*"
   },
   "devDependencies": {
